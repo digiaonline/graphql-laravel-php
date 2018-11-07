@@ -1,0 +1,40 @@
+{
+    "name": "digiaonline/graphql-laravel",
+    "description": "A Laravel service provider for our GraphQL implementation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Stenvall",
+            "email": "sam.stenvall@digia.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "digiaonline/graphql": "^1.0",
+        "illuminate/support": "^5.5",
+        "jalle19/laravel-lost-interfaces": "^1.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.10.5",
+        "phpunit/phpunit": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Digia\\GraphQL\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Digia\\GraphQL\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "phpstan analyse -l 7 src/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
